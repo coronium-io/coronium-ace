@@ -3,12 +3,11 @@
 </br>
 __Docker 1.8+ Droplet__ on [DigitalOcean](https://www.digitalocean.com/?refcode=cddeeddbbdb8) or __any Docker enabled device.__
 
-</br>
 DigitalOcean has a pre-built Docker instance available, select it in the "Applications" tab when deploying your droplet.
 
 ___Use the DigitalOcean link above and get 2 months free credit to test ACE. It also helps support Coronium development.___
 
-__Downloading the "ACE card"__
+###Downloading the "ACE card"
 
 SSH into the __Docker__ host once it is active, and enter the following in your terminal:
 
@@ -16,7 +15,7 @@ SSH into the __Docker__ host once it is active, and enter the following in your 
 wget https://s3.amazonaws.com/coronium-ace/installs/ace;chmod +x ace;mv ace /usr/local/bin;ace
 ```
 
-__Starting up the ACE stack.__
+###Starting the ACE Stack
 
 ```bash
 ace init
@@ -64,8 +63,6 @@ ace banish <app_name>
 
 ___You will not be able to recover your "app" folder if you use `ace banish`___
 
----
-
 __Restarting an ACE container:__
 
 ___Be aware that Docker reassigns ports when a container is restarted. This is a something that will be addressed in future ACE versions.___
@@ -80,7 +77,7 @@ You can find "app" names by using the `ace apps` option, or by viewing your `/ho
 
 ---
 
-__Spawn a new ACE container:__
+###Spawn a New ACE Instance:__
 
 While you can run multiple ACE containers, as a general rule, the less containers running, the more power available to serve clients. Unless you need concrete separation between two clients -- or closed all of your ACE containers -- you should not have much need for this command.
 
@@ -109,7 +106,7 @@ __On some modules, you can view test endpoints after install at /mod_name/\_doc_
 
 To `add` or `remove` modules from your app, you use `ace`:
 
-__Adding the 'data' module to the 'ace' app__
+###Adding the 'data' module to the 'ace' app
 
 ```bash
 ace add ace data
@@ -117,7 +114,7 @@ ace add ace data
 
 > Params: __add__ *app_name* *module_name*
 
-__Removing a module from the 'ace' app__
+###Removing a module from the 'ace' app
 
 ```bash
 ace remove ace echo
@@ -137,7 +134,7 @@ A special __Coronium ACE__ Docker image has been built for the ARM processor, wh
 
 ## Docker on RPI
 
-### To reduce complexity, Coronium ACE for RPI is currently being compiled as a bootable RPI 1 and 2 image. Both images will be available shortly.
+### To reduce complexity, Coronium ACE for RPI is currently being rebuilt as a bootable RPI 1 and 2 image. Both images will be available shortly.
 
 ---
 
