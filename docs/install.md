@@ -7,15 +7,15 @@ DigitalOcean has a pre-built Docker instance available, select it in the "Applic
 
 ___Use the DigitalOcean link above and get 2 months free credit to test ACE. It also helps support Coronium development.___
 
-###Downloading the "ACE card"
+### Starting the ACE Stack
 
-SSH into the __Docker__ host once it is active, and enter the following in your terminal:
+SSH into the __Docker__ host once it is active, and run the following in the terminal:
 
 ```bash
 wget https://s3.amazonaws.com/coronium-ace/installs/ace;chmod +x ace;mv ace /usr/local/bin;ace
 ```
 
-### Starting the ACE Stack
+And then...
 
 ```bash
 ace init
