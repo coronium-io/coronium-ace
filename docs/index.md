@@ -29,6 +29,8 @@ http://your.ace.host:12345/echo/test?ace=rocks&bigfoot=lives
 
 __JSON Output:__ `{"ace":"rocks","bigfoot":"lives"}`
 
+Okay, so we kind of cheated by using the ACE package manager. But, creating an 'echo' module is pretty easy...
+
 ## Or the "hard" way...
 
 ```lua
