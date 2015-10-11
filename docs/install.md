@@ -6,9 +6,9 @@ __Docker 1.8+ Droplet__ on [DigitalOcean](https://www.digitalocean.com/?refcode=
 </br>
 DigitalOcean has a pre-built Docker instance available, select it in the "Applications" tab when deploying your droplet.
 
-> ___Use the DigitalOcean link above and get 2 months free credit to test ACE. It also helps support Coronium development.___
+___Use the DigitalOcean link above and get 2 months free credit to test ACE. It also helps support Coronium development.___
 
-__Download the installer:__
+__Downloading the "ACE card"__
 
 SSH into the __Docker__ host once it is active, and enter the following in your terminal:
 
@@ -16,7 +16,7 @@ SSH into the __Docker__ host once it is active, and enter the following in your 
 wget https://s3.amazonaws.com/coronium-ace/installs/ace;chmod +x ace;mv ace /usr/local/bin;ace
 ```
 
-__Start up ACE stack:__
+__Starting up the ACE stack.__
 
 ```bash
 ace init
@@ -38,7 +38,7 @@ You should get `{"ace":"rocks"}` back in your browser. If so, you're good to go.
 
 The `ace` tool is your entry point to your underlying ACE particulars. It's not something you'll use often, but it has a couple of options that may be needed in special, or informational situations.
 
-To view the most current `ace` options and usage, enter:
+__To view the most current `ace` options and usage, enter:__
 
 ```bash
 ace help
@@ -46,13 +46,23 @@ ace help
 
 You can also use `ace h` as a shortcut. You will be presented with the current list of options available to you.
 
+### Preview Notes
+
 __Removing an ACE container:__
 
-___This is currently a destructive operation at the Preview stage. The container is permanently deleted.___
+___This is currently a destructive operation at the Preview stage. The container is permanently deleted, but your "app" folder will remain.___
 
 ```bash
-ace-card stop <app_name>
+ace stop <app_name>
 ```
+
+If you want to remove the "app" folder as well when stopping the container, use:
+
+```bash
+ace banish <app_name>
+```
+
+___You will not be able to recover your "app" folder is you use `ace banish`___
 
 ---
 
@@ -70,17 +80,17 @@ There are many more ACE options you can view by running `ace h` in the terminal.
 
 ---
 
-__Initialize a new ACE container:__
+__Spawn a new ACE container:__
 
-> While you can run multiple ACE containers, as a general rule, the less containers running, the more power available to serve clients. Unless you need concrete separation between two clients -- or closed all of your ACE containers -- you should only need to use this command once.
+While you can run multiple ACE containers, as a general rule, the less containers running, the more power available to serve clients. Unless you need concrete separation between two clients -- or closed all of your ACE containers -- you should not have much need for this command.
 
 ___If more containers are needed, run no more than 2-3 max for 512MB of system memory.___
-
-__ACE instances must have unique names or they will not be created! You can reuse a name by issuing the `ace stop <app_name>` command first, essentially removing that instance name from the system.__
 
 ```bash
 ace spawn <app_name>
 ```
+
+__ACE instances must have unique names or they will not be created! You can reuse a name by issuing the `ace stop <app_name>` command first, essentially removing that instance name from the system.__
 
 ### Module Package Manager
 
