@@ -23,9 +23,6 @@ __Example of Docker host ACE directory structure:__
       api.lua
       ...
 ```
-
-During Preview, closing an ACE container does not remove the "app" it was bootstrapping.
-
 ---
 
 ## Input and Output
