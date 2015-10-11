@@ -5,7 +5,7 @@ __Docker 1.8+ Droplet__ on [DigitalOcean](https://www.digitalocean.com/?refcode=
 
 DigitalOcean has a pre-built Docker instance available, select it in the "Applications" tab when deploying your droplet.
 
-___Use the DigitalOcean link above and get 2 months free credit to test ACE. It also helps support Coronium development.___
+___Use this [DigitalOcean](https://www.digitalocean.com/?refcode=cddeeddbbdb8) link and get 2 months free credit to test ACE. It also helps support Coronium ACE development.___
 
 ### Starting the ACE Stack
 
