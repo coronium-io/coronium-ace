@@ -22,7 +22,10 @@ ace add ace echo
 
 Visit the newly created endpoint and pass some data.
 
-__API Endpoint:__ `http://your.ace.host:12345/echo/test?ace=rocks&bigfoot=lives`
+__API Endpoint:__
+```bash
+http://your.ace.host:12345/echo/test?ace=rocks&bigfoot=lives
+```
 
 __JSON Output:__ `{"ace":"rocks","bigfoot":"lives"}`
 
