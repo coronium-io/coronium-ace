@@ -549,7 +549,7 @@ Name        | Type   | Description | Required
 error | String | The human readable error string. | Yes
 error_code | Number | An optional related error code. | No
 
-> Sending a generic error response
+### Sending a generic error response
 
 If you just need to pass a general error back, use:
 
