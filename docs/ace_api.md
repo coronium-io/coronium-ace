@@ -54,6 +54,16 @@ Object | An object to place api methods on.
 ## ace.object
 An easy to use, persistent data storage object.
 
+Methods | Description
+--------|-------------
+.fetch(id)   | Get a data object reference.
+Create or retrieve a data object.
+obj:get(key)     | Get the value of a key.
+obj:set(key,value) | Set a key with a value.
+obj:del(key) | Deletes a key and value.
+obj:save(close) | Saves the data object.
+obj:delete() | Clears out the data object.
+obj:close() | Release the data object reference.
 ---
 
 ## ace.request
