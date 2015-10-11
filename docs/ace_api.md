@@ -204,7 +204,7 @@ local tpl =
   dogs = {'Muffy','sparky','woofy'}
 }
 return ace.tpl.render('cogs.html', tpl)
----
+```
 
 ```html
 <!-- cogs.html -->
