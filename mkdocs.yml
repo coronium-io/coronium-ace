@@ -1,0 +1,9 @@
+site_name: Coronium ACE
+site_url: http://docs.develephant.com
+copyright: Coronium ACE | 2015 &copy; develephant | coronium.io
+pages:
+- Home: index.md
+- Installation: install.md
+- Developing: usage.md
+- The ACE API: ace_api.md
+theme: flatly
