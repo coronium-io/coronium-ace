@@ -4,13 +4,13 @@ A __Coronium ACE__ instance needs an "app" directory to connect to during runtim
 
 An "app" directory can contain as many modules as you can fit, which in turn can handle many api calls. You can also run additional ACE instances for separated environments via Docker, or duplicate environments for load balancing.
 
-> In most cases one instance of ACE will be sufficient, because of the app/module system, which is limited only by disk capacity of the host.
+> *In most cases one instance of ACE will be sufficient, because of the app/module system, which is limited only by disk capacity of the host.*
 
 ## Apps Directory
 
 Your modules will be placed in the `/home/<app_name>` directory of the __Docker Host__. You can SFTP, or SCP to this location to manage files.
 
-> Example of Docker host ACE directory structure:
+__Example of Docker host ACE directory structure:__
 
 ```bash
 /home
@@ -24,7 +24,7 @@ Your modules will be placed in the `/home/<app_name>` directory of the __Docker 
       ...
 ```
 
-> __During Preview, closing an ACE container does not remove the "app" it was bootstrapping.__
+During Preview, closing an ACE container does not remove the "app" it was bootstrapping.
 
 ---
 
@@ -34,7 +34,7 @@ In essence, ACE is a standard HTTP server, with a custom Lua based API. With thi
 
 Except when facilitated by other services, an HTTP interaction with a client has a __request__ and __response__ phase. Once the response phase has taken place, that's the end of that requests lifecycle. Persistence is emulated through data storage, modules, cookies, and other methods.
 
-> A client loses state after the response phase. Each request starts the lifecycle again.
+> *A client loses state after the response phase. Each request starts the lifecycle again.*
 
 When a client makes a request to one of the method routes in your API, they often will send additional data to be processed. Coronium ACE only supports __GET__ and __POST__ requests.
 
@@ -109,7 +109,7 @@ end
 return api
 ```
 
-Or through the use of ACE wraps:
+Or through the use of [ACE wraps](ace-wraps):
 
 ```lua
 -- app/users/api.lua
@@ -127,7 +127,10 @@ end
 return api
 ```
 
-__Request URL:__ `http://your.docker.host:12345/users/hello?username=Steve`
+__Request URL:__
+```bash
+http://your.docker.host:12345/users/hello?username=Steve
+```
 
 __Json Payload:__ `{"result":"Glad to meet you, Steve."}`
 
