@@ -161,9 +161,7 @@ __If the request is successful the content will be in the `request.body` result 
 ---
 
 ## ace.tpl
-A template system using [lustache](https://github.com/Olivine-Labs/lustache). Inspired by the popular mustache system.
-
-This module only has one method called `render`.
+A template system. This module only has one method called `render`.
 
 ```lua
 local tpl_string = ace.tpl.render('home.index', {site_title="My Cool Site"})
@@ -197,7 +195,26 @@ Your HTML template may look something like this:
 <!-- some html code -->
 ```
 
+Looping values:
+
+```lua
+-- Lua
+local tpl =
+{
+  dogs = {'Muffy','sparky','woofy'}
+}
+return ace.tpl.render('cogs.html', tpl)
 ---
+
+```html
+<!-- cogs.html -->
+...
+<body>
+  {% for _, dog in ipairs( dogs ) %}
+    <div>{{ dog }}</div>
+  {% end %}
+</body>
+...
 
 ## ace.upload
 ___Not available during Preview.___
