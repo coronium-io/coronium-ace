@@ -3,6 +3,6 @@ copyright: Coronium ACE | 2015 &copy; develephant | coronium.io
 pages:
 - Start Here...: index.md
 - Installing Coronium ACE: install.md
-- Coronium ACE Development: usage.md
-- The Coronium ACE API: ace_api.md
-- About Coronium ACE: about.md
+- ACE Development: usage.md
+- The ACE API: ace_api.md
+- About ACE: about.md
