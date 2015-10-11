@@ -487,7 +487,6 @@ Though you can easily return a Lua table structure to the client directly, there
 
 Send a response to the client with a `result` key.
 
-</br>
 ___String___
 
 ```lua
@@ -496,7 +495,6 @@ return ace.result("Some String Data")
 
 __Json Response:__ `{"result":"Some String Data"}`
 
-</br>
 ___Hashed Lua Table___
 
 ```lua
@@ -505,7 +503,6 @@ return ace.result({username:"Ed"})
 
 __Json Response:__ `{"result":{"username":"Ed"}}`
 
-</br>
 ___Lua Table array___
 
 ```lua
@@ -514,7 +511,6 @@ return ace.result({'fred','velma','shaggy'})
 
 __Json Response:__ `{"result":["fred","velma","shaggy"]}`
 
-</br>
 The following aliases can be used in place of `ace.result`
 
 - `ace.response`
@@ -524,7 +520,6 @@ The following aliases can be used in place of `ace.result`
 
 Despite the name, they all return a regular payload: `{"result":"..."}`. The choice is yours as to which one you care to use.
 
-</br>
 ### Overriding the "result" key
 
 There may be special situations where you would like to change the `result` key to something else. This can be done by passing the replacement key after your content.
