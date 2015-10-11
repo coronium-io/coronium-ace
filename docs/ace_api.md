@@ -207,7 +207,7 @@ return ace.tpl.render('cogs.html', tpl)
 ```
 
 ```html
-<!-- cogs.html -->
+<!-- dogs.html -->
 ...
 <body>
   {% for _, dog in ipairs( dogs ) %}
@@ -216,6 +216,7 @@ return ace.tpl.render('cogs.html', tpl)
 </body>
 ...
 ```
+---
 
 ## ace.upload
 ___Not available during Preview.___
