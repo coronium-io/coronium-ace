@@ -15,7 +15,7 @@ SSH into the __Docker__ host once it is active, and enter the following in your 
 wget https://s3.amazonaws.com/coronium-ace/installs/ace;chmod +x ace;mv ace /usr/local/bin;ace
 ```
 
-###Starting the ACE Stack
+### Starting the ACE Stack
 
 ```bash
 ace init
@@ -77,7 +77,7 @@ You can find "app" names by using the `ace apps` option, or by viewing your `/ho
 
 ---
 
-###Spawn a New ACE Instance:__
+###Spawn a New ACE Instance
 
 While you can run multiple ACE containers, as a general rule, the less containers running, the more power available to serve clients. Unless you need concrete separation between two clients -- or closed all of your ACE containers -- you should not have much need for this command.
 
