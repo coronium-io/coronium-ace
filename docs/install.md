@@ -62,7 +62,7 @@ If you want to remove the "app" folder as well when stopping the container, use:
 ace banish <app_name>
 ```
 
-___You will not be able to recover your "app" folder is you use `ace banish`___
+___You will not be able to recover your "app" folder if you use `ace banish`___
 
 ---
 
@@ -70,13 +70,13 @@ __Restarting an ACE container:__
 
 ___Be aware that Docker reassigns ports when a container is restarted. This is a something that will be addressed in future ACE versions.___
 
-You can find "app" names by using the `ace apps` option, or by viewing your `/home` directory on the Docker host.
-
 ```bash
 ace restart <app_name>
 ```
 
-There are many more ACE options you can view by running `ace h` in the terminal.
+You can find "app" names by using the `ace apps` option, or by viewing your `/home` directory on the Docker host.
+
+>There are many more ACE options you can view by running `ace h` in the terminal.
 
 ---
 
