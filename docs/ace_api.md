@@ -56,14 +56,28 @@ An easy to use, persistent data storage object.
 
 Methods | Description
 --------|-------------
-.fetch(id)   | Get a data object reference.
-Create or retrieve a data object.
+ace.object.fetch(id)   | Get a data object (obj).
 obj:get(key)     | Get the value of a key.
 obj:set(key,value) | Set a key with a value.
 obj:del(key) | Deletes a key and value.
 obj:save(close) | Saves the data object.
 obj:delete() | Clears out the data object.
 obj:close() | Release the data object reference.
+
+```lua
+local obj = ace.object.fectch("123")
+local username = obj:get("username")
+obj:set("last_login", os.time())
+obj:save(true)
+```
+
+```lua
+local obj = ace.object.fetch("123")
+local last_login = obj:get("last_login")
+obj:delete()
+obj:close()
+```
+
 ---
 
 ## ace.request
