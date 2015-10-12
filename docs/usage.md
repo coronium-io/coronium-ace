@@ -2,6 +2,8 @@
 
 A __Coronium ACE__ instance needs an "app" directory to connect to during runtime. This folder lives on the actual __Docker Host__, ___not in a Coronium ACE container instance.___
 
+__The default app name on an initial installation is `ace`__
+
 An "app" directory can contain as many modules as you can fit, which in turn can handle many api calls. You can also run additional ACE instances for separated environments via Docker, or duplicate environments for load balancing.
 
 > *In most cases one instance of ACE will be sufficient, because of the app/module system, which is limited only by disk capacity of the host.*

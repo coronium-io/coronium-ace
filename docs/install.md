@@ -74,7 +74,7 @@ ace restart <app_name>
 
 You can find "app" names by using the `ace apps` option, or by viewing your `/home` directory on the Docker host.
 
-__The default app name on an initial install, is oddly enough; `ace`__
+__The default app name on an initial install is oddly enough; `ace`__
 
 *There are many more ACE options you can view by running `ace h` in the terminal.*
 
