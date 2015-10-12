@@ -1,6 +1,5 @@
 # ~ ACE Installation ~
 
-</br>
 __Docker 1.8+ Droplet__ on [DigitalOcean](https://www.digitalocean.com/?refcode=cddeeddbbdb8) or __any Docker enabled device.__
 
 DigitalOcean has a pre-built Docker instance available, select it in the "Applications" tab when deploying your droplet.
@@ -23,6 +22,8 @@ ace init
 
 > ACE is Wild!
 
+The default app is named: __ace__
+
 During the initialization a test module was added. You can access the "echo" test for your app by pointing a browser to your Docker host and ACE port with the following path and parameters.
 
 ```bash
@@ -43,7 +44,7 @@ __To view the most current `ace` options and usage, enter:__
 ace help
 ```
 
-You can also use `ace h` as a shortcut. You will be presented with the current list of options available to you.
+__You can also use `ace h` as a shortcut__. You will be presented with the current list of options available to you.
 
 ### Preview Notes
 
@@ -73,7 +74,9 @@ ace restart <app_name>
 
 You can find "app" names by using the `ace apps` option, or by viewing your `/home` directory on the Docker host.
 
->There are many more ACE options you can view by running `ace h` in the terminal.
+__The default app name on an initial install, is oddly enough; `ace`__
+
+*There are many more ACE options you can view by running `ace h` in the terminal.*
 
 ---
 
@@ -130,7 +133,7 @@ __View `ace h` for more ACE MPM options.__
 
 A special __Coronium ACE__ Docker image has been built for the ARM processor, which is used in embedded devices, or small form factor "computers" like the popular [Raspberry PI](https://www.raspberrypi.org/) device. Through the use of Lua, and available libraries, you can read and control sensors, system information, etc.
 
-> Coronium ACE is the communication channel between your IoT device and client.
+*Coronium ACE is the communication channel between your IoT device and client.*
 
 ## Docker on RPI
 
@@ -140,7 +143,7 @@ A special __Coronium ACE__ Docker image has been built for the ARM processor, wh
 
 # ~ ACE Client Starters ~
 
-You might be asking yourself, "Where are the client SDKs?" And the answer is there are none. Coronium ACE is built as a toolkit, and provides structured flexibility, allowing you to create whatever client works best for you and your platform.
+You might be asking yourself, "Where are the client SDKs?" And the answer is, there are none. Coronium ACE is built as a toolkit, and provides structured flexibility, allowing you to create whatever client works best for you and your platform.
 
 By using the standards of HTTP and JSON, nearly any programming language can communicate with the ACE api. To build a client your platform only needs to support the following:
 
@@ -149,7 +152,7 @@ By using the standards of HTTP and JSON, nearly any programming language can com
 
 ---
 
-Here are some "starter" examples for different programming environments.
+Here are some "starter" examples for some programming environments.
 
 ### AngularJS
 __An AngularJS Sample using [$http service](https://docs.angularjs.org/api/ng/service/$http) (JS)__

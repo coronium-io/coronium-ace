@@ -2,7 +2,7 @@
 
 **In the Coronium ACE Preview release anything is subject to change.**
 
-> Make sure to read the [Installation](install.md) and [Developing](usage.md) sections first.
+*Make sure to read the [Installation](install.md) and [Developing](usage.md) sections first.*
 
 ## ace.api
 The `ace.api` method creates an empty API object to add GET and POST "method routing" to.
@@ -39,11 +39,11 @@ return api
 
 The `hello` method will now fire on both a POST and a GET request.
 
-_Parameters:_
+__Parameters:__
 
 None
 
-_Returns:_
+__Returns:__
 
 Type   | Description
 ------ | ----------------------------------
@@ -65,7 +65,7 @@ obj:delete() | Clears out the data object.
 obj:close() | Release the data object reference.
 
 ```lua
-local obj = ace.object.fectch("123")
+local obj = ace.object.fetch("123")
 local username = obj:get("username")
 obj:set("last_login", os.time())
 obj:save(true)
@@ -83,8 +83,7 @@ obj:close()
 ## ace.request
 A module to create an outgoing HTTP request. A request has a multipart setup; create a `request` instance, build a `params` table for the request, and finally call the request with the params and wait for the result. Any returned data from the request will be in the `result.body` variable.
 
-</br>
-> An example of using the request module.
+*An example of using the request module.*
 
 ```lua
 local req_object = ace.request.new("http://google.com")
@@ -105,9 +104,9 @@ if result then
 end
 ```
 
-> Creating a new request object.
+*Creating a new request object.*
 
-_Parameters:_
+__Parameters:__
 
 Name | Type   | Description | Required
 ---- | ------ | -------------------------------- |
@@ -118,13 +117,13 @@ port | String | An optional port number. | No
 local req_object = ace.request.new( host [, port ] )
 ```
 
-_Returns:_
+__Returns:__
 
 Type   | Description
 ------ | ---------------------
 Object | A new ACE request object.
 
-> Setting up the request params table.
+*Setting up the request params table.*
 
 The request command parameter table contains the following keys:
 
@@ -164,27 +163,27 @@ __If the request is successful the content will be in the `request.body` result 
 A template system. This module only has one method called `render`.
 
 ```lua
-local tpl_string = ace.tpl.render('home.index', {site_title="My Cool Site"})
+local tpl_string = ace.tpl.render('home.html', {site_title="My Cool Site"})
 ```
 
 When referencing templates in the __tpl__ directory, you do not need to include the __tpl/__ prefix, as shown above.
 
-> Templates can have any extension type, for example __index.tpl__ and __index.html__ work the same.
+*Templates can have any extension type, for example __index.tpl__ and __index.html__ work the same.*
 
-_Parameters:_
+__Parameters:__
 
 Name      | Type  | Description | Required
 --------- | ----- | ----------------------- |
 tpl_path | String | The template name (with extension) or full path to the template file. | Yes
 token[s] | Table | The hashed table of data to pass to the template. | No
 
-_Returns:_
+__Returns:__
 
 Type  | Description
 ----- | ------------------------------------
 String | The rendered template as a string.
 
-Your HTML template may look something like this:
+*Your HTML template may look something like this:*
 
 ```html
 <!-- /tpl/home.html -->
@@ -195,15 +194,17 @@ Your HTML template may look something like this:
 <!-- some html code -->
 ```
 
-Looping values:
+Which, in this case, would output 'My Cool Site' in a browser,
+
+__Looping values:__
 
 ```lua
 -- Lua
 local tpl =
 {
-  dogs = {'Muffy','sparky','woofy'}
+  dogs = {'Muffy','Sparky','Woofy'}
 }
-return ace.tpl.render('cogs.html', tpl)
+return ace.tpl.render('dogs.html', tpl)
 ```
 
 ```html
@@ -234,11 +235,11 @@ local json_str = jtbl.toJson()
 
 __Json Response:__ `{"username":"Marco"}`
 
-_Parameters:_
+__Parameters:__
 
 None
 
-_Returns:_
+__Returns:__
 
 Type  | Description
 ----- | --------------------------------------
@@ -254,17 +255,17 @@ local json_string, err = ace.jsonify( lua_table )
 if not json_string then
   print( err )
 else
-  print(json_string)
+  print( json_string )
 end
 ```
 
-_Parameters:_
+__Parameters:__
 
 Name      | Type  | Description | Required
 --------- | ----- | ----------------------- |
 lua_table | Table | A JSON encodable table. | Yes
 
-_Returns:_
+__Returns:__
 
 Type  | Description
 ----- | ------------------------------------
@@ -281,17 +282,17 @@ local lua_table, err = ace.tableize( json_string )
 if not lua_table then
   print( err )
 else
-  print(lua_table.some_key)
+  print( lua_table.some_key )
 end
 ```
 
-_Parameters:_
+__Parameters:__
 
 Name        | Type   | Description | Required
 ----------- | ------ | ------------------- |
 json_string | String | A decodable string. | Yes
 
-_Returns:_
+__Returns:__
 
 Type  | Description
 ----- | ------------------------------------
@@ -304,21 +305,20 @@ Error | A Lua string error. If table is nil.
 Log a message to the ACE instance log. You can view these logs using the [ace-card](install.md#ace-card) on your Docker host.
 
 ```lua
-ace.log("Something totally cool happened")
+ace.log( "Something totally cool happened" )
 ```
 
-_Parameters:_
+__Parameters:__
 
 Name        | Type   | Description | Required
 ----------- | ------ | ------------------- |
 log_message | String | A plain string to log. | Yes
 
-_Returns:_
+__Returns:__
 
 Nothing
 
-
-*You can use the [ace-card](install/#ace-card) to view the app logs.*
+*You can use the [ace](install/#ace-card) tool to view the app logs.*
 
 ---
 
@@ -329,11 +329,11 @@ Returns a universally unique identifier.
 local new_uuid = ace.uuid()
 ```
 
-_Parameters:_
+__Parameters:__
 
 None
 
-_Returns:_
+__Returns:__
 
 Type  | Description
 ----- | --------------------------------------
@@ -353,14 +353,14 @@ local formatted = ace.sf("some/path/%s", endpoint )
 --== Result: "some/path/hello"
 ```
 
-_Parameters:_
+__Parameters:__
 
 Name       | Type   | Description | Required
 ---------- | ------ | --------------------------------------------------------------------- |
 format_exp | String | A string expression with specially marked tokens for data. | Yes
 token[s]   | String | A comma delimited list of tokens to replace in the format expression. | Yes
 
-_Returns:_
+__Returns:__
 
 Type   | Description
 ------ | -------------------------
@@ -372,22 +372,22 @@ String | A token formatted string.
 Trim extra space from both ends of a string.
 
 ```lua
-local trimed = ace.trim( " hi there  ")
+local trimmed = ace.trim( " hi there  ")
 
---== trimed = "hi there"
+--== trimmed = "hi there"
 ```
 
-_Parameters:_
+__Parameters:__
 
 Name        | Type   | Description | Required
 ----------- | ------ | ------------------- |
 str_content | String | A string to trim. | Yes
 
-_Returns:_
+__Returns:__
 
 Type   | Description
 ------ | ------------------
-String | An trimed string.
+String | An trimmed string.
 
 ---
 
@@ -407,14 +407,14 @@ local tbl_array = ace.split("a b c d e f")
 print( tbl_array[2] ) -- b
 ```
 
-_Parameters:_
+__Parameters:__
 
 Name        | Type   | Description | Required
 ----------- | ------ | ------------------- |
 str_content | String | A delimited string to split. | Yes
 spliter | String | The delimiter to split on. Default: single space " " | No
 
-_Returns:_
+__Returns:__
 
 Type   | Description
 ------ | ------------------
@@ -432,13 +432,13 @@ local escaped = ace.escape( "Sugar & spice & everything nice." )
 --== escaped = "Sugar &amp; spice &amp; everything nice."
 ```
 
-_Parameters:_
+__Parameters:__
 
 Name        | Type   | Description | Required
 ----------- | ------ | ------------------- |
 str_content | String | A string to escape. | Yes
 
-_Returns:_
+__Returns:__
 
 Type   | Description
 ------ | ------------------
@@ -455,13 +455,13 @@ local unescaped = ace.unescape( "Sugar &amp; spice &amp; everything nice.")
 --== unescaped = "Sugar & spice & everything nice."
 ```
 
-_Parameters:_
+__Parameters:__
 
 Name        | Type   | Description | Required
 ----------- | ------ | --------------------- |
 str_content | String | A string to unescape. | Yes
 
-_Returns:_
+__Returns:__
 
 Type   | Description
 ------ | --------------------
@@ -478,13 +478,13 @@ local base64_string = ace.encode64( "Super fun is fun to be had!" )
 --== base64_string = "U3VwZXIgZnVuIGlzIGZ1biB0byBiZSBoYWQh"
 ```
 
-_Parameters:_
+__Parameters:__
 
 Name        | Type   | Description | Required
 ----------- | ------ | ------------------- |
 plain_string | String | A string to Base 64 encode. | Yes
 
-_Returns:_
+__Returns:__
 
 Type   | Description
 ------ | ----------------------
@@ -501,13 +501,13 @@ local decoded = ace.decode64( "U3VwZXIgZnVuIGlzIGZ1biB0byBiZSBoYWQh" )
 --== decoded = "Super fun is fun to be had!"
 ```
 
-_Parameters:_
+__Parameters:__
 
 Name        | Type   | Description | Required
 ----------- | ------ | --------------------- |
 base64_string | String | A Base 64 string to decode. | Yes
 
-_Returns:_
+__Returns:__
 
 Type   | Description
 ------ | --------------------
@@ -518,7 +518,7 @@ String | A plain string.
 ## ace.json
 Provides direct access to the [__cjson__](http://www.kyne.com.au/~mark/software/lua-cjson-manual.html#_api_functions) library, which allows extended, less used, configuration options. You should only need to reference this module for JSON data that is misbehaving. Take note, that if an encode or decode process fails using __cjson__, your app will throw a runtime error.
 
-> Unless your JSON needs special handing, use [ace.jsonify](#acejsonify) and [ace.tableize](#acetableize) for __runtime safe JSON encoding and decoding.__
+*Unless your JSON needs special handing, use [ace.jsonify](#acejsonify) and [ace.tableize](#acetableize) for __runtime safe JSON encoding and decoding.__*
 
 ---
 
@@ -585,7 +585,7 @@ return ace.error("The database blew up!", 911)
 
 __Json Response:__ `{"error":"The database blew up!","errorCode":911}`
 
-_Parameters:_
+__Parameters:__
 
 Name        | Type   | Description | Required
 ----------- | ------ | --------------------- |
