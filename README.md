@@ -1,6 +1,6 @@
 # Coronium ACE Preview 1
 
-![http://arthur-oauth-plugin.readthedocs.org/?badge=latest]
+![Docs Badge](http://arthur-oauth-plugin.readthedocs.org/?badge=latest)
 
 ## Documentation
 
