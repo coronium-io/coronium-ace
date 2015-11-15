@@ -189,7 +189,7 @@ __[Learn more about module usage in the API docs.](ace_pi_api.md)__
 
 ---
 
-# Troubleshooting
+## Troubleshooting
 
 __Start the Instance__
 
@@ -199,20 +199,23 @@ Check to make sure the ACE Pi instance is running by logging into the RPi and is
 acepi
 ```
 
-If your instance is "__stopped__", then issue the following:
+If your instance is __stopped__, then issue the following:
 
 ```bash
 acepi start
 ```
 
-It should now be in a "__running__" state. Run `acepi h` for more control options.
+It should now be in a __running__ state. Run `acepi h` for more control options.
+
+---
 
 __Accessing ACE Pi__
 
-Your API entrypoint can be found at: __http:\/\/your.rpi_domain_or_ip:8081__
+Your API entrypoint can be found at: __your.rpi_domain_or_ip:8081__
 
-Call an API endpoint: __http:\/\/your.rpi_domain_or_ip:8081/echo/test?hello=Pi__
+Call an API endpoint: __your.rpi_domain_or_ip:8081/echo/test?hello=Pi__
 
+---
 
 __Logs, Modules and More__
 
@@ -223,6 +226,8 @@ acepi help
 #OR
 acepi h
 ```
+
+---
 
 __Coronium ACE Library__
 
