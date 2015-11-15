@@ -112,9 +112,9 @@ wget https://s3.amazonaws.com/coronium-ace/rpi/coronium-ace-rpi_0.3-1.deb
 sudo dpkg -i coronium-ace-rpi_0.3-1.deb
 ```
 
-!!! info "Ace Instance"
-  Your new instance can be found at __/home/pi/Ace__
+Your new instance can be found at __/home/pi/Ace__
 
+---
 
 __Module Development__
 
