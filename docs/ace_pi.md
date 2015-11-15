@@ -64,7 +64,8 @@ Your RPi will reboot into terminal mode (no more UI). The UI takes up precious R
  - At the login prompt enter: __pi__.
  - Enter whatever password you created at first launch.
 
-Once you are logged in, you should perform the following "tweaks" to the system. First run the `raspi-config` tool.
+Once you are logged in, you should perform the following "tweaks" to the system.
+First run the `raspi-config` tool.
 
 ```bash
 sudo raspi-config
@@ -79,7 +80,7 @@ ___Required___
   
   - __Expand Filesystem__ (Will update on next reboot)
   - __Advanced Options > Memory Split__ : Set to "16"
-  - __Internationalisation Options > Change Locale__ : User choice (UTF-8 prefferred)
+  - __Internationalisation Options > Change Locale__ : User choice (UTF-8 is best)
   - __Internationalisation Options > Change Timezone__ : User choice
   - __Internationalisation Options > Change Keyboard Layout__ : User choice
   - __Advanced Options > SPI__ : Enable (at 'autoload' prompt: "yes")
