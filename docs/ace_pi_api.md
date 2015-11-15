@@ -15,7 +15,7 @@ local p = ace.lpeg.R"az"^1 * -1
 return { res = p:match("hello") } --> 6
 ```
 
-!! note "Learn More"
+!!! note "Learn More"
   __[Learn more about how to use this library here.](http://www.inf.puc-rio.br/~roberto/lpeg/)__
 
 ---
@@ -41,7 +41,7 @@ gpio_out:close()
 return { res = value }
 ```
 
-!! note "Learn More"
+!!! info "Learn More"
   __[Learn more about how to use this library here.](https://github.com/vsergeev/lua-periphery/blob/master/docs/gpio.md)__
 
 ## ace.i2c

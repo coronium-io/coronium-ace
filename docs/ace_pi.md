@@ -4,19 +4,19 @@
 
 __Coronium Ace Pi (acepi) is available for installation on [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/), running on a Raspberry Pi version 1B or better.__
 
-## Differences from Coronium Ace
+## Differences from Ace
 
- - Ace is aimed at the [Raspberry Pi](https://www.raspberrypi.org) (RPi) small form factor "computer". Specifically the [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) distribution.
+ - Ace Pi is aimed at the [Raspberry Pi](https://www.raspberrypi.org) (RPi) small form factor "computer". Specifically the [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) distribution.
+ 
+ - The `ace` card is called as `acepi` on the Raspberry Pi devices.
 
  - Coronium Ace Pi is _not_ Docker based, and installs on the Raspbian OS directly.
 
  - There is only a single 'app' instance, but you can create as many modules as your sdcard can hold.
  
- - 12 additional namespaces relevant to the Raspberry Pi and general system tools.
+ - 12 additional namespaces relevant to the Raspberry Pi and low-level system tools have been added.
  
- - The __lpeg__ library, which allows you to easily parse system data.
- 
- - The `ace` card now called `acepi` on the Raspberry Pi.
+ - The __lpeg__ library has been added, which allows you to easily parse system data.
  
 ## Installation
 
@@ -24,7 +24,7 @@ This is a development version of Coronium Ace Pi and should be installed separat
 
 ___For best results, a fresh sdcard install with [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) is highly recommended and will be assumed in the upcoming steps.___
 
-## Access the Additional Modules
+## Additional Modules
 
 Coronium Ace Pi comes with some extra API tools for interacting with the RPi hardware, and includes the following additional modules:
 
