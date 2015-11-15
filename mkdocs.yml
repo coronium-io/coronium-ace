@@ -1,8 +1,15 @@
 site_name: Coronium ACE
 copyright: Coronium ACE | 2015 &copy; develephant | coronium.io
+markdown_extensions:
+  - admonition
+  - fenced_code
+  - toc:
+      permalink: True
 pages:
 - Start Here...: index.md
 - Installing Coronium ACE: install.md
 - ACE Development: usage.md
 - The ACE API: ace_api.md
+- Coronium ACE PI: ace_pi.md
+- ACE PI Modules: ace_pi_api.md
 - About ACE: about.md

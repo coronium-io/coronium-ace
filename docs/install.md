@@ -131,13 +131,7 @@ __View `ace h` for more ACE MPM options.__
 
 # ~ ACE Raspberry PI ~
 
-A special __Coronium ACE__ Docker image has been built for the ARM processor, which is used in embedded devices, or small form factor "computers" like the popular [Raspberry PI](https://www.raspberrypi.org/) device. Through the use of Lua, and available libraries, you can read and control sensors, system information, etc.
-
-*Coronium ACE is the communication channel between your IoT device and client.*
-
-## Docker on RPI
-
-### To reduce complexity, Coronium ACE for RPI is currently being rebuilt as a bootable RPI 1 and 2 image. Both images will be available shortly.
+See [Coronium Ace RPi](ace_pi.md)
 
 ---
 
