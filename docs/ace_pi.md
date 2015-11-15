@@ -1,6 +1,6 @@
 # ~ Coronium ACE RPi ~
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="develephant" data-size="large" data-hashtags="coroniumace">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="develephant" data-size="large" data-hashtags="coroniumacerpi">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 [![Build Status](https://drone.io/github.com/coronium-io/coronium-ace-raspbian/status.png)](https://drone.io/github.com/coronium-io/coronium-ace-raspbian/latest)
@@ -25,7 +25,8 @@ __Coronium Ace Pi (acepi) is available for installation on [Raspbian Jessie](htt
  
 ## Installation
 
-This is a development version of Coronium Ace Pi and should be installed separate of your main system while testing.
+!!! danger "Warning"
+  This is a development version of Coronium Ace Pi and should be installed separate of your main system while testing.
 
 ___For best results, a fresh sdcard install with [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) is highly recommended and will be assumed in the upcoming steps.___
 
@@ -54,9 +55,10 @@ When you first boot to the Raspbian UI, in the upper-left, select __Menu > Prefe
  
 __raspi-config__
 
-Your RPi will reboot into terminal mode (no more UI). The UI takes up a precious RAM, and we really don't need a full OS UI for Ace. If you are running a RPi 1b, you can't run Ace and the UI at the same time without performance degradation.
+Your RPi will reboot into terminal mode (no more UI). The UI takes up precious RAM, and we really don't need a full OS UI for Ace. If you are running a RPi 1b, you can't run Ace and the UI at the same time without serious performance degradation.
 
-At the login prompt enter: __pi__. Enter whatever password you created at first launch.
+ - At the login prompt enter: __pi__.
+ - Enter whatever password you created at first launch.
 
 Once you are logged in, you should perform the following "tweaks" to the system. First run the `raspi-config` tool.
 
@@ -64,7 +66,10 @@ Once you are logged in, you should perform the following "tweaks" to the system.
 sudo raspi-config
 ```
 
-Once the config tool loads you will see many different options. Ignore any warnings, and make changes to the following:
+Once the config tool loads you will see many different options. Make changes to the following:
+
+!!! info "Tip"
+  You can ignore any warnings that pop up. It all works itself out in the end.
   
 ___Required___
   
@@ -87,9 +92,8 @@ Reboot when prompted.
 
 __Install Redis__
 
-After the system reboots login with __pi__
-
-Password should be what you set earlier in the setup.
+ - After the system reboots login with __pi__.
+ - Password should be what you set earlier in the setup.
 
 ```bash
 sudo apt-get update
@@ -124,6 +128,9 @@ __Uninstall ACE Pi__
 __Uninstall Redis-Server__
 
 `sudo apt-get remove redis-server`
+
+!!! warning "Note"
+  Any files added to the Ace Pi installation will not be removed by the uninstaller. This protects your added modules from accidental deletion.
 
 ---
 
