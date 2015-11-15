@@ -23,7 +23,7 @@ __Coronium Ace Pi (acepi) is available for installation on [Raspbian Jessie](htt
  
  - The __lpeg__ library has been added, which allows you to easily parse system data.
  
-## Installation
+## ACE Pi Installation
 
 __This is a development version of Coronium Ace Pi and should be installed separate of your main system while testing.__
   
@@ -37,7 +37,7 @@ Install a current version of __Raspbian Jessie OS__ on your Raspberry Pi 1b or 2
 __[Click Here for Raspbian Installation Options](https://www.raspberrypi.org/downloads/)__
 
 !!! info "Note"
-  Use NOOBS if you're new to installing Raspbian on the RPi.
+  Use NOOBS if you're new to installing Raspbian on the RPi, though using an image is about 5 times faster.
 
 ---
 
