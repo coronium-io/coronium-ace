@@ -2,7 +2,7 @@
 
 **In the Coronium ACE PI Developer release anything is subject to change.**
 
-*Make sure to read the [Installation](ace_pi.md#installation) and [Developing](usage.md) sections first.*
+*Make sure to read the [Ace Pi Installation](ace_pi.md#installation) and [ACE Development](usage.md) sections first.*
 
 # lpeg
 

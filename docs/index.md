@@ -7,7 +7,7 @@ __A tiny Lua Server+API aimed at rapid service development, from IoT to full sta
 
 ---
 
-*Preview 1 (2015.10)*
+*Alpha (2015.11)*
 
 __Coronium ACE__ is a *highly-opinionated* server and framework for rapid development of REST/API like services using __Lua__. Though breaking with convention, it creates a simplified interface to the __Coronium ACE__ API. Hopefully you'll find this reductionism refreshing to develop with.
 

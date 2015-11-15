@@ -1,12 +1,17 @@
 # ~ Coronium ACE RPi ~
 
+<a href="https://twitter.com/share" class="twitter-share-button" data-via="develephant" data-size="large" data-hashtags="coroniumace">Tweet</a>
+<script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
+[![Build Status](https://drone.io/github.com/coronium-io/coronium-ace-raspbian/status.png)](https://drone.io/github.com/coronium-io/coronium-ace-raspbian/latest)
+
 *Coronium ACE PI is the communication channel between your RPi device and client, allowing you to quickly build lightweight APIs to control your RPi.*
 
 __Coronium Ace Pi (acepi) is available for installation on [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/), running on a Raspberry Pi version 1B or better.__
 
 ## Differences from Ace
 
- - Ace Pi is aimed at the [Raspberry Pi](https://www.raspberrypi.org) (RPi) small form factor "computer". Specifically the [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) distribution.
+ - Ace Pi is aimed at the [Raspberry Pi](https://www.raspberrypi.org) (RPi) small form factor "computer".  Specifically the [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) Linux distribution.
  
  - The `ace` card is called as `acepi` on the Raspberry Pi devices.
 
@@ -23,6 +28,8 @@ __Coronium Ace Pi (acepi) is available for installation on [Raspbian Jessie](htt
 This is a development version of Coronium Ace Pi and should be installed separate of your main system while testing.
 
 ___For best results, a fresh sdcard install with [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) is highly recommended and will be assumed in the upcoming steps.___
+
+
 
 ## Additional Modules
 
