@@ -32,7 +32,7 @@ ___For best results, a fresh sdcard install with [Raspbian Jessie](https://www.r
 
 __Preflight__
 
-Install a current version of __Raspbian OS__ on your Raspberry Pi 1b or 2 device.
+Install a current version of __Raspbian Jessie OS__ on your Raspberry Pi 1b or 2 device.
 
 __[Click Here for Raspbian Installation Options](https://www.raspberrypi.org/downloads/)__
 
