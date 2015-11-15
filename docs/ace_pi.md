@@ -1,7 +1,8 @@
 # Coronium ACE Pi
 
-<a href="https://twitter.com/share" class="twitter-share-button" data-via="develephant" data-size="large" data-hashtags="coroniumacerpi">Tweet</a>
+<a href="https://twitter.com/share" class="twitter-share-button" data-url="http://coronium-ace.readthedocs.org" data-text="Coronium ACE for IoT and Cloud" data-via="develephant" data-size="large" data-related="Lua" data-hashtags="raspberrypi">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
+
 
 [![Build Status](https://drone.io/github.com/coronium-io/coronium-ace-raspbian/status.png)](https://drone.io/github.com/coronium-io/coronium-ace-raspbian/latest)
 
