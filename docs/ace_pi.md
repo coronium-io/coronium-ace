@@ -65,7 +65,8 @@ Your RPi will reboot into terminal mode (no more UI). The UI takes up precious R
  - Enter whatever password you created at first launch.
 
 Once you are logged in, you should perform the following "tweaks" to the system.
-First run the `raspi-config` tool.
+
+__First run the `raspi-config` tool:__
 
 ```bash
 sudo raspi-config
