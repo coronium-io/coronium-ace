@@ -14,6 +14,8 @@ __Coronium ACE Pi (acepi) is available for installation on [Raspbian Jessie](htt
  - ACE Pi is aimed at the [Raspberry Pi](https://www.raspberrypi.org) (RPi) small form factor "computer".  Specifically the [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) Linux distribution.
  
  - The `ace` card is called as `acepi` on the Raspberry Pi devices.
+ 
+ - The 'app' path on the Raspberry Pi is __/home/pi/Ace/app__.
 
  - Coronium ACE Pi is _not_ Docker based, and installs on the Raspbian OS directly.
 
@@ -131,6 +133,16 @@ You can manage your ACE Pi instance by using the `acepi` tool:
 ```bash
 acepi
 ```
+
+Add the `rpi` test module.
+
+```bash
+acepi add rpi
+```
+
+Point your browser to __your.rpi_domain_or_ip:8081/rpi/temp__
+
+You should see the Raspberry Pi temperature output to the page. Browse this code and other methods in the __/home/pi/Ace/app/rpi/api.lua__ file.
 
 ---
 
