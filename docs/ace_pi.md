@@ -1,21 +1,21 @@
-# ~ Coronium ACE RPi ~
+# Coronium ACE Pi
 
 <a href="https://twitter.com/share" class="twitter-share-button" data-via="develephant" data-size="large" data-hashtags="coroniumacerpi">Tweet</a>
 <script>!function(d,s,id){var js,fjs=d.getElementsByTagName(s)[0],p=/^http:/.test(d.location)?'http':'https';if(!d.getElementById(id)){js=d.createElement(s);js.id=id;js.src=p+'://platform.twitter.com/widgets.js';fjs.parentNode.insertBefore(js,fjs);}}(document, 'script', 'twitter-wjs');</script>
 
 [![Build Status](https://drone.io/github.com/coronium-io/coronium-ace-raspbian/status.png)](https://drone.io/github.com/coronium-io/coronium-ace-raspbian/latest)
 
-*Coronium ACE PI is the communication channel between your RPi device and client, allowing you to quickly build lightweight APIs to control your RPi.*
+*Coronium ACE Pi is the communication channel between your RPi device and client, allowing you to quickly build lightweight APIs to control your RPi.*
 
-__Coronium Ace Pi (acepi) is available for installation on [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/), running on a Raspberry Pi version 1B or better.__
+__Coronium ACE Pi (acepi) is available for installation on [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/), running on a Raspberry Pi version 1B or better.__
 
-## Differences from Ace
+## Differences from ACE
 
- - Ace Pi is aimed at the [Raspberry Pi](https://www.raspberrypi.org) (RPi) small form factor "computer".  Specifically the [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) Linux distribution.
+ - ACE Pi is aimed at the [Raspberry Pi](https://www.raspberrypi.org) (RPi) small form factor "computer".  Specifically the [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) Linux distribution.
  
  - The `ace` card is called as `acepi` on the Raspberry Pi devices.
 
- - Coronium Ace Pi is _not_ Docker based, and installs on the Raspbian OS directly.
+ - Coronium ACE Pi is _not_ Docker based, and installs on the Raspbian OS directly.
 
  - There is only a single 'app' instance, but you can create as many modules as your sdcard can hold.
  
@@ -25,7 +25,7 @@ __Coronium Ace Pi (acepi) is available for installation on [Raspbian Jessie](htt
  
 ## ACE Pi Installation
 
-__This is a development version of Coronium Ace Pi and should be installed separate of your main system while testing.__
+__This is a development version of Coronium ACE Pi and should be installed separate of your main card while playing.__
   
 
 ___For best results, a fresh sdcard install with [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) is highly recommended and will be assumed in the upcoming steps.___
@@ -56,7 +56,7 @@ When you first boot to the Raspbian UI, in the upper-left, select __Menu > Prefe
  
 __raspi-config__
 
-Your RPi will reboot into terminal mode (no more UI). The UI takes up precious RAM, and we really don't need a full OS UI for Ace. If you are running a RPi 1b, you can't run Ace and the UI at the same time without serious performance degradation.
+Your RPi will reboot into terminal mode (no more UI). The UI takes up precious RAM, and we really don't need a full OS UI for ACE Pi. If you are running a RPi 1b, you can't run Ace and the UI at the same time without serious performance degradation.
 
  - At the login prompt enter: __pi__.
  - Enter whatever password you created at first launch.
@@ -112,9 +112,21 @@ wget https://s3.amazonaws.com/coronium-ace/rpi/coronium-ace-rpi_0.3-1.deb
 sudo dpkg -i coronium-ace-rpi_0.3-1.deb
 ```
 
+!!! info "Ace Instance"
+  Your new instance can be found at __/home/pi/Ace__
+
+
+__Module Development__
+
+Your modules should be placed in __/home/pi/Ace/app__
+
+The port that the ACE Pi service runs on is __8081__
+
+---
+
 __ACEPi Card__
 
-You can manage your Ace instance by using the `acepi` tool:
+You can manage your ACE Pi instance by using the `acepi` tool:
 
 ```bash
 acepi
@@ -137,7 +149,7 @@ __Uninstall Redis-Server__
 
 ## Additional Modules
 
-Coronium Ace Pi comes with some extra API tools for interacting with the RPi hardware, and includes the following additional modules:
+Coronium ACE Pi comes with some extra API tools for interacting with the RPi hardware, and includes the following additional modules:
 
 Module|Details
 ------|-------
@@ -174,3 +186,44 @@ __System Command__
   - ace.cmd
   
 __[Learn more about module usage in the API docs.](ace_pi_api.md)__
+
+---
+
+# Troubleshooting
+
+__Start the Instance__
+
+Check to make sure the ACE Pi instance is running by logging into the RPi and issuing the following command, then checking for the "status" text.
+
+```bash
+acepi
+```
+
+If your instance is "stopped", then issue the following:
+
+```bash
+acepi start
+```
+
+It should now be in a "running" state. Run `acepi h` for more control options.
+
+__Accessing ACE Pi__
+
+Your API entrypoint can be found at: http://your.rpi_domain_or_ip:8081
+
+Call an API endpoint: http://your.rpi_domain_or_ip:8081/echo/test?hello=Pi
+
+
+__Logs, Modules and More__
+
+You can view all the ACE Pi options available by entering:
+
+```bash
+acepi help
+#OR
+acepi h
+```
+
+__Coronium ACE Library__
+
+In addition to the ACE Pi modules, you also have access to all the base [Coronium Ace API](ace_api.md) modules.
