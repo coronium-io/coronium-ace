@@ -287,8 +287,7 @@ Variable|The result or error from the operation.
 
 The [__ljsyscall__](https://github.com/justincormack/ljsyscall) library is not very well documented, but is a popular Lua module for issuing low level commands on your Unix/Linux system. Not every command works, so only through testing will you know which ones will work on your RPi.
 
-!!! warning "Documentation"
-  This module will require some code diving to discover its abilities. You can [start here](https://github.com/justincormack/ljsyscall/tree/master/test).
+___This module will require some code diving to discover its abilities. You can [start here](https://github.com/justincormack/ljsyscall/tree/master/test).___
 
 ## ace.sys
 

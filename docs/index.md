@@ -13,7 +13,7 @@ __Coronium ACE__ is a *highly-opinionated* server and framework for rapid develo
 
 The __Coronium ACE__ binary (including server) weighs in under 40 MB. It's __Docker__ powered, so your options are wide open for development, deployment, security, and scalability.
 
-There is also a special ARM version for Docker on the __Raspberry PI__.
+There is also a special __[Raspberry Pi](ace_pi.md)__ version for __Raspbian Jessie__, allowing you to interact with the RPi from virtually any device.
 
 ---
 
