@@ -64,11 +64,11 @@ Once you are logged in, you should perform the following "tweaks" to the system.
 sudo raspi-config
 ```
 
-Once the config tool loads you will see many different options. Make changes to the following:
+Once the config tool loads you will see many different options. Ignore any warnings, and make changes to the following:
   
 ___Required___
   
-  - __Expand Filesystem__ (ignore error, FS will update on upcoming reboot)
+  - __Expand Filesystem__ (Will update on next reboot)
   - __Advanced Options > Memory Split__ : Set to "16"
   - __Internationalisation Options > Change Locale__ : User choice (UTF-8 prefferred)
   - __Internationalisation Options > Change Timezone__ : User choice
@@ -165,3 +165,4 @@ __System Command__
 
   - ace.cmd
   
+__[Learn more about module usage in the API docs.](ace_pi_api.md)__
