@@ -29,7 +29,103 @@ This is a development version of Coronium Ace Pi and should be installed separat
 
 ___For best results, a fresh sdcard install with [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) is highly recommended and will be assumed in the upcoming steps.___
 
+__Preflight__
 
+Install a current version of __Raspbian OS__ on your Raspberry Pi 1b or 2 device.
+
+__[Click Here for Raspbian Installation Options](https://www.raspberrypi.org/downloads/)__
+
+_Note: Use NOOBS if you're new to installing Raspbian on the RPi._
+
+---
+
+__Initial setup__
+
+When you first boot to the Raspbian UI, in the upper-left, select __Menu > Preferences > Raspberry Pi Configuration__
+
+ 1. Click __Change Password__ to update the password.
+ 1. In __Hostname__ enter `ace-pi` (or something).
+ 1. In The __Boot__ section, select "To CLI".
+ 1. In __Auto login__, uncheck "Login as user 'pi'"
+ 1. Click "OK".
+ 1. __Reboot when prompted.__
+ 
+---
+ 
+__raspi-config__
+
+Your RPi will reboot into terminal mode (no more UI). The UI takes up a precious RAM, and we really don't need a full OS UI for Ace. If you are running a RPi 1b, you can't run Ace and the UI at the same time without performance degradation.
+
+At the login prompt enter: __pi__. Enter whatever password you created at first launch.
+
+Once you are logged in, you should perform the following "tweaks" to the system. First run the `raspi-config` tool.
+
+```bash
+sudo raspi-config
+```
+
+Once the config tool loads you will see many different options. Make changes to the following:
+  
+___Required___
+  
+  - __Expand Filesystem__ (ignore error, FS will update on upcoming reboot)
+  - __Advanced Options > Memory Split__ : Set to "16"
+  - __Internationalisation Options > Change Locale__ : User choice (UTF-8 prefferred)
+  - __Internationalisation Options > Change Timezone__ : User choice
+  - __Internationalisation Options > Change Keyboard Layout__ : User choice
+  - __Advanced Options > SPI__ : Enable (at 'autoload' prompt: "yes")
+  - __Advanced Options > I2C__ : Enable (at 'autoload' prompt: "yes")
+  
+___Optional___
+  
+  - __Enable Camera__
+  - __Overclock__
+  
+Reboot when prompted.
+
+---
+
+__Install Redis__
+
+After the system reboots login with __pi__
+
+Password should be what you set earlier in the setup.
+
+```bash
+sudo apt-get update
+sudo apt-get install -y redis-server
+```
+
+---
+
+__ACE Pi Installation__
+
+Coronium ACE Pi is easily installed as a Debian package.
+
+```bash
+wget https://s3.amazonaws.com/coronium-ace/rpi/coronium-ace-rpi_0.3-1.deb
+sudo dpkg -i coronium-ace-rpi_0.3-1.deb
+```
+
+__ACEPi Card__
+
+You can manage your Ace instance by using the `acepi` tool:
+
+```bash
+acepi
+```
+
+---
+
+__Uninstall ACE Pi__
+
+`sudo dpkg -r coronium-ace-rpi`
+
+__Uninstall Redis-Server__
+
+`sudo apt-get remove redis-server`
+
+---
 
 ## Additional Modules
 
