@@ -15,7 +15,7 @@ local p = ace.lpeg.R"az"^1 * -1
 return { res = p:match("hello") } --> 6
 ```
 
-!!! note "Learn More"
+!!! info "Documentation"
   __[Learn more about how to use this library here.](http://www.inf.puc-rio.br/~roberto/lpeg/)__
 
 ---
@@ -41,7 +41,7 @@ gpio_out:close()
 return { res = value }
 ```
 
-!!! info "Learn More"
+!!! info "Documentation"
   __[Learn more about how to use this library here.](https://github.com/vsergeev/lua-periphery/blob/master/docs/gpio.md)__
 
 ## ace.i2c
@@ -62,7 +62,7 @@ i2c:close()
 return { res = val }
 ```
 
-!! note "Learn More"
+!!! info "Documentation"
   __[Learn more about how to use this library here.](https://github.com/vsergeev/lua-periphery/blob/master/docs/i2c.md)__
 
 ## ace.spi
@@ -84,7 +84,7 @@ spi:close()
 return { v1 = v1, v2 = v2 }
 ```
 
-!! note "Learn More"
+!!! info "Documentation"
   __[Learn more about how to use this library here.](https://github.com/vsergeev/lua-periphery/blob/master/docs/spi.md)__
 
 ## ace.serial
@@ -105,7 +105,7 @@ serial:close()
 return { res = res }
 ```
 
-!! note "Learn More"
+!!! info "Documentation"
   __[Learn more about how to use this library here.](https://github.com/vsergeev/lua-periphery/blob/master/docs/serial.md)__
 
 ## ace.mmio
@@ -139,7 +139,7 @@ ctrl_mmio:close()
 return { v1 = v1, v2 = v2 }
 ```
 
-!! note "Learn More"
+!!! info "Documentation"
   __[Learn more about how to use this library here.](https://github.com/vsergeev/lua-periphery/blob/master/docs/mmio.md)__
   
 ---
@@ -268,7 +268,7 @@ Type  | Description
 Boolean or `nil` |The return status of the operation.
 Variable|The result or error from the operation.
 
-!! note "Tip"
+!!! info "Tip"
   This method is similar to running a command in a terminal program.
 
 ---
@@ -277,7 +277,7 @@ Variable|The result or error from the operation.
 
 The [__ljsyscall__](https://github.com/justincormack/ljsyscall) library is not very well documented, but is a popular Lua module for issuing low level commands on your Unix/Linux system. Not every command works, so only through testing will you know which ones will work on your RPi.
 
-!! warning "Documentation"
+!!! warning "Documentation"
   This module will require some code diving to discover its abilities. You can [start here](https://github.com/justincormack/ljsyscall/tree/master/test).
 
 ## ace.sys
