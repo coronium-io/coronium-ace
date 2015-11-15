@@ -25,9 +25,7 @@ __Coronium Ace Pi (acepi) is available for installation on [Raspbian Jessie](htt
  
 ## Installation
 
-
-!!! danger "Warning"
-  This is a development version of Coronium Ace Pi and should be installed separate of your main system while testing.
+__This is a development version of Coronium Ace Pi and should be installed separate of your main system while testing.__
   
 
 ___For best results, a fresh sdcard install with [Raspbian Jessie](https://www.raspberrypi.org/downloads/raspbian/) is highly recommended and will be assumed in the upcoming steps.___
