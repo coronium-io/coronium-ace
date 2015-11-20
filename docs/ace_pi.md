@@ -113,8 +113,8 @@ __ACE Pi Installation__
 Coronium ACE Pi is easily installed as a Debian package.
 
 ```bash
-wget https://s3.amazonaws.com/coronium-ace/rpi/coronium-ace-rpi_0.3-1.deb
-sudo dpkg -i coronium-ace-rpi_0.3-1.deb
+wget https://s3.amazonaws.com/coronium-ace/rpi/coronium-ace-rpi_0.3-2.deb
+sudo dpkg -i coronium-ace-rpi_0.3-2.deb
 ```
 
 Your new instance can be found at __/home/pi/Ace__
